@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123d2b">
+<title>بلدة العصير | Juice Town</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="language-screen" class="language-screen">
+  <div class="language-glow glow-one"></div>
+  <div class="language-glow glow-two"></div>
+  <div class="language-content">
+    <div class="language-logo">✳</div>
+    <p class="language-kicker">FRESHNESS STARTS HERE</p>
+    <h1 class="language-title">
+      <span>بلدة العصير</span>
+      <span class="english-title">JUICE TOWN</span>
+    </h1>
+    <p class="language-description">نكهتك المفضلة، على مزاجك.</p>
+    <p class="language-description english-description">Your favourite flavours, your way.</p>
+    <div class="language-divider"><span></span><b>اختر لغتك · Choose your language</b><span></span></div>
+    <div class="language-options">
+      <button class="language-card" type="button" data-enter-language="ar">
+        <span class="language-flag">ع</span>
+        <span class="language-card-copy"><strong>العربية</strong><small>تابع باللغة العربية</small></span>
+        <span class="language-arrow">←</span>
+      </button>
+      <button class="language-card" type="button" data-enter-language="en">
+        <span class="language-flag english-flag">EN</span>
+        <span class="language-card-copy"><strong>English</strong><small>Continue in English</small></span>
+        <span class="language-arrow">→</span>
+      </button>
+    </div>
+    <div class="language-footer"><span>🍊</span> Fresh • Natural • Refreshing <span>🍃</span></div>
+  </div>
+</section>
+
+<div id="scroll-progress" class="scroll-progress"></div>
+
+<div class="site-shell">
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Juice Town home">
+      <span class="brand-mark">✳</span>
+      <span><strong data-shop-ar>بلدة العصير</strong><small>JUICE TOWN</small></span>
+    </a>
+    <div class="header-actions">
+      <button id="language-toggle" class="ghost-button" type="button">English</button>
+      <button id="cart-open" class="cart-button" type="button">
+        <span aria-hidden="true">🛒</span><span data-i18n="cart">السلة</span><b id="cart-count">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="welcome" class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="freshTag">طازج • طبيعي • منعش</span>
+        <h1 data-i18n="heroTitle">انتعاشك يبدأ من هنا</h1>
+        <p data-i18n="heroText">اختر نكهتك المفضلة من بلدة العصير، وخلّ الانتعاش يوصل لك.</p>
+        <button id="browse-menu" class="primary-button" data-i18n="browse">تصفح المنيو</button>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun-disc"></div>
+        <div class="fruit fruit-orange">●</div>
+        <div class="fruit fruit-lime">●</div>
+        <div class="fruit fruit-strawberry">♥</div>
+        <div class="glass"><div class="juice"></div><div class="straw"></div></div>
+        <span class="leaf leaf-one"></span><span class="leaf leaf-two"></span>
+      </div>
+      <div class="hero-bottom"><span>100% GOOD VIBES</span><span data-i18n="heroNote">نكهات ترسم يومك</span></div>
+    </section>
+
+    <section class="feature-strip">
+      <article class="feature-card">
+        <span class="feature-icon">🍊</span>
+        <div><h3 data-i18n="feature1">نكهات على مزاجك</h3><p>Your flavour, your way</p></div>
+        <span class="feature-number">01</span>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🥤</span>
+        <div><h3 data-i18n="feature2">اختر حجمك وإضافاتك</h3><p>Choose your size & extras</p></div>
+        <span class="feature-number">02</span>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">💬</span>
+        <div><h3 data-i18n="feature3">طلبك عبر واتساب</h3><p>Order easily on WhatsApp</p></div>
+        <span class="feature-number">03</span>
+      </article>
+    </section>
+
+    <section id="menu-section" class="menu-section">
+      <div class="section-heading">
+        <div><span class="eyebrow" data-i18n="menuEyebrow">اختيارات طازجة</span><h2 data-i18n="menuTitle">منيو بلدة العصير</h2></div>
+        <p data-i18n="menuSub">اكتشف مشروبك القادم</p>
+      </div>
+      <div class="search-row">
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" data-placeholder="search" placeholder="ابحث عن صنف..." autocomplete="off"></label>
+        <div id="results-count" class="results-count"></div>
+      </div>
+      <nav id="category-tabs" class="category-tabs" aria-label="Menu categories"></nav>
+      <div id="product-grid" class="product-grid"></div>
+      <div id="empty-state" class="empty-state hidden" data-i18n="noResults">ما لقينا أصناف تطابق بحثك.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">✳</span><span><strong>بلدة العصير</strong><small>JUICE TOWN</small></span></a>
+    <p data-i18n="footerText">كل رشفة، لحظة انتعاش.</p>
+    <span>© <span id="year"></span> Juice Town</span>
+  </footer>
+</div>
+
+<div id="cart-backdrop" class="backdrop" hidden></div>
+<aside id="cart-drawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cart-title">
+  <div class="drawer-header">
+    <div><span class="eyebrow" data-i18n="yourOrder">طلبك</span><h2 id="cart-title" data-i18n="cart">السلة</h2></div>
+    <button id="cart-close" class="close-button" type="button" aria-label="Close cart">×</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div id="cart-empty" class="cart-empty">
+    <span>🧃</span><h3 data-i18n="emptyCart">سلتك تنتظر أول اختيار!</h3><p data-i18n="emptyCartSub">أضف شيء منعش وبيظهر هنا.</p>
+  </div>
+  <div class="drawer-bottom">
+    <div class="total-line"><span data-i18n="subtotal">المجموع</span><strong id="cart-total">0.00 ر.س</strong></div>
+    <button id="checkout-open" class="primary-button full-button" type="button" data-i18n="checkout">إتمام الطلب</button>
+    <p class="fine-print" data-i18n="checkoutNote">سيتم تجهيز رسالة طلبك لفتحها في واتساب.</p>
+  </div>
+</aside>
+
+<div id="toast" class="toast" role="status" aria-live="polite">
+  <span class="toast-check">✓</span><span id="toast-message">تمت الإضافة إلى السلة</span>
+  <button id="toast-cart" type="button" data-i18n="viewCart">عرض السلة</button>
+  <button id="toast-close" type="button" aria-label="Close notification">×</button>
+</div>
+
+<div id="checkout-modal" class="modal-backdrop" hidden>
+  <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <div class="drawer-header">
+      <div><span class="eyebrow" data-i18n="lastStep">الخطوة الأخيرة</span><h2 id="checkout-title" data-i18n="checkoutTitle">تفاصيل الطلب</h2></div>
+      <button id="checkout-close" class="close-button" type="button" aria-label="Close checkout">×</button>
+    </div>
+    <div id="checkout-summary" class="checkout-summary"></div>
+    <form id="checkout-form">
+      <div class="form-grid">
+        <label><span data-i18n="fullName">الاسم الكامل</span><input name="name" required maxlength="80" autocomplete="name" placeholder="الاسم"></label>
+        <label><span data-i18n="phone">رقم الجوال</span><input name="phone" required inputmode="tel" maxlength="20" autocomplete="tel" placeholder="05xxxxxxxx"></label>
+      </div>
+      <label class="delivery-label"><span data-i18n="fulfillment">طريقة الاستلام</span>
+        <select name="fulfillment" id="fulfillment">
+          <option value="delivery" data-i18n="delivery">توصيل</option>
+          <option value="pickup" data-i18n="pickup">استلام من المحل</option>
+        </select>
+      </label>
+      <label id="address-field"><span data-i18n="address">العنوان / موقع التوصيل</span><textarea name="address" rows="2" maxlength="250" placeholder="الحي، الشارع، تفاصيل الموقع"></textarea></label>
+      <label><span data-i18n="notes">ملاحظات إضافية</span><textarea name="notes" rows="2" maxlength="300" placeholder="مثلاً: بدون سكر، زيادة ثلج..."></textarea></label>
+      <div class="modal-total"><span data-i18n="total">الإجمالي</span><strong id="checkout-total">0.00 ر.س</strong></div>
+      <button type="submit" class="whatsapp-button"><span>◉</span><span data-i18n="sendWhatsApp">إرسال الطلب عبر واتساب</span><span>↗</span></button>
+      <p class="fine-print" data-i18n="whatsappNote">سيُفتح واتساب برسالة جاهزة؛ راجعها ثم اضغط إرسال.</p>
+    </form>
+  </section>
+</div>
+
+<button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+<script src="menu-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
